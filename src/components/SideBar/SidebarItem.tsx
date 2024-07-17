@@ -1,7 +1,14 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {SidebarItemProps} from "../../types/props";
 
+export interface SidebarItemProps {
+    label: string;
+    className: string | "";
+    textClassName: string | "";
+    activeIndex: boolean;
+    handleClick: () => void;
+    index: number;
+}
 
 
 export const SidebarItem = ({

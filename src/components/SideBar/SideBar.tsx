@@ -1,7 +1,10 @@
 import React from 'react'
 import {SidebarItem} from "./SidebarItem";
-import {NavbarProps} from "../../types/props";
 
+export interface NavbarProps {
+    activeIndex: Number | null;
+    handleClick: (index: Number) => void;
+}
 const SideBar = ({activeIndex,handleClick}:NavbarProps) => {
 
     return (

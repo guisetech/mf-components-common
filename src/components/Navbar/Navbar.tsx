@@ -2,7 +2,11 @@ import React from 'react'
 import Logo from "./Logo";
 import NavbarItem from "./NavbarItem";
 import Button from "./Button";
-import {NavbarProps} from "../../types/props";
+//import {NavbarProps} from "../../types/props";
+export interface NavbarProps {
+    activeIndex: Number | null;
+    handleClick: (index: Number) => void;
+}
 
 const Navbar = ({activeIndex,handleClick}:NavbarProps) => {
     return (
