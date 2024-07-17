@@ -17,9 +17,8 @@ const NavbarItem = ({activeIndex, handleClick}:NavbarProps) => {
                 item.map((value, index) => {
                     return (
                         <Link key={index}
-                              onClick={() => handleClick(index)}
                               className={`text-white text-base font-normal border border-transparent hover:p-2 rounded-lg ${activeIndex === index ? "bg-gradient-to-r from-yellow-300 to-orange-400 p-2 text-black" : " "} hover:cursor-pointer hover:bg-gradient-to-r from-yellow-300 to-orange-400 hover:text-black font-['Roboto']`}
-                              to={`/${value}`}>{value}</Link>
+                              to={`/${value}`}><button onClick={() => handleClick(index)}>{value}</button></Link>
                     )
                 })
             }
