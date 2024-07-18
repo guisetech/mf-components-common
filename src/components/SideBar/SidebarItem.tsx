@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+//import {Link} from "react-router-dom";
 
 export interface SidebarItemProps {
     label: string;
@@ -21,8 +21,8 @@ export const SidebarItem = ({
                             }: SidebarItemProps): JSX.Element => {
 
     return (
-        <Link
-            to={`/${label}`}
+        <a
+            href={`/${label}`}
             className={`w-52 pl-4 py-2.5 rounded-lg justify-start items-center gap-3 inline-flex hover:cursor-pointer hover:bg-gradient-to-r from-yellow-300 to-orange-400 ${activeIndex ? "bg-gradient-to-r from-yellow-300 to-orange-400" : ""} ${className}`}
         >
             <div className="w-5 h-5 relative">
@@ -31,7 +31,7 @@ export const SidebarItem = ({
                 className={`w-28 text-slate-500 text-sm font-medium  font-['PingFang SC'] leading-tight ${textClassName}`}>
                 <button onClick={() => handleClick}>{label}</button>
             </div>
-        </Link>
+        </a>
     );
 };
 
