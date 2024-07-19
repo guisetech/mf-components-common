@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from "./Logo";
 import NavbarItem from "./NavbarItem";
-import Button from "./Button";
+import RegisterButton from "./RegisterButton";
 //import {NavbarProps} from "../../types/props";
 export interface NavbarProps {
     activeIndex: Number | null;
@@ -17,8 +17,8 @@ const Navbar = ({activeIndex,handleClick}:NavbarProps) => {
                 <NavbarItem activeIndex={activeIndex} handleClick={handleClick}/>
             </div>
             <div className="button-section">
-                <Button value={"Log In"} className={"border-2 border-amber-500 text-white"} fontColor={"text-white"}/>
-                <Button className={"bg-gradient-to-r from-yellow-300 to-orange-400"} value={"Register"}/>
+                <RegisterButton value={"Log In"} className={"border-2 border-amber-500 text-white"} fontColor={"text-white"}/>
+                <RegisterButton className={"bg-gradient-to-r from-yellow-300 to-orange-400"} value={"Register"}/>
             </div>
         </div>
     )

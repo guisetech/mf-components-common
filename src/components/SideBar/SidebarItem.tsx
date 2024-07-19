@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Common/Button";
 //import {Link} from "react-router-dom";
 
 export interface SidebarItemProps {
@@ -29,7 +30,7 @@ export const SidebarItem = ({
             </div>
             <div
                 className={`text ${textClassName}`}>
-                <button onClick={() => handleClick}>{label}</button>
+                <Button children={label} onClick={()=>handleClick()}/>
             </div>
         </a>
     );

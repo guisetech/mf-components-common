@@ -1,5 +1,6 @@
 import React from 'react'
 import "../../styles/sidebar.css"
+import Button from "../Common/Button";
 
 interface props {
     className?: string,
@@ -8,14 +9,14 @@ interface props {
     fontColor?: string
 }
 
-const Button = ({className, value, fontColor="text-gray-900",  font = 'font-[\'Roboto\']'}: props): JSX.Element => {
+const RegisterButton = ({className, value, fontColor="text-gray-900",  font = 'font-[\'Roboto\']'}: props): JSX.Element => {
     return (
         <div
             className={`button ${className}`}>
             <div className={`text ${fontColor}  ${font}`}>
-                <button>{value}</button>
+                <Button children={value}/>
             </div>
         </div>
     )
 }
-export default Button
+export default RegisterButton

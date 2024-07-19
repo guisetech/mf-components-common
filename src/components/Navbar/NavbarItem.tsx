@@ -1,6 +1,7 @@
 import React from 'react'
 //import {Link} from 'react-router-dom'
 import {NavbarProps} from "../../types/props";
+import Button from "../Common/Button";
 
 const NavbarItem = ({activeIndex, handleClick}:NavbarProps) => {
     const item = [
@@ -26,7 +27,7 @@ const NavbarItem = ({activeIndex, handleClick}:NavbarProps) => {
                     return (
                         <a key={index}
                            style={activeIndex === index ? activeStyle : defaultStyle}
-                              href={`/${value}`}><button onClick={() => handleClick(index)}>{value}</button></a>
+                              href={`/${value}`}><Button children={value}/></a>
                     )
                 })
             }
