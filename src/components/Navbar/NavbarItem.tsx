@@ -11,13 +11,21 @@ const NavbarItem = ({activeIndex, handleClick}:NavbarProps) => {
         "Team"
     ]
 
+    const activeStyle = {
+        backgroundImage: 'linear-gradient(to right, #fde68a, #fb923c)',
+        padding: '8px',
+        color: 'black'
+    };
+
+    const defaultStyle = {};
+
     return (
-        <div className="justify-start items-center gap-10 flex ">
+        <div className="navbarItem ">
             {
                 item.map((value, index) => {
                     return (
                         <a key={index}
-                              className={`text-white text-base font-normal border border-transparent hover:p-2 rounded-lg ${activeIndex === index ? "bg-gradient-to-r from-yellow-300 to-orange-400 p-2 text-black" : " "} hover:cursor-pointer hover:bg-gradient-to-r from-yellow-300 to-orange-400 hover:text-black font-['Roboto']`}
+                           style={activeIndex === index ? activeStyle : defaultStyle}
                               href={`/${value}`}><button onClick={() => handleClick(index)}>{value}</button></a>
                     )
                 })
