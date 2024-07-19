@@ -18,7 +18,7 @@ const Navbar = ({activeIndex,handleClick}:NavbarProps) => {
             </div>
             <div className="button-section">
                 <RegisterButton value={"Log In"} className={"border-2 border-amber-500 text-white"} fontColor={"text-white"}/>
-                <RegisterButton className={"bg-gradient-to-r from-yellow-300 to-orange-400"} value={"Register"}/>
+                <RegisterButton className={"registerButton"} value={"Register"}/>
             </div>
         </div>
     )

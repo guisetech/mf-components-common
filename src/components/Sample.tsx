@@ -1,9 +1,9 @@
 function Sample() {
   return (
     <div>
-      <header style={{ background: "red" }}>
+      <button style={{ border:"none",borderRadius:"5px" }}>
         This is a Sample component from mf-components-common
-      </header>
+      </button>
     </div>
   );
 }

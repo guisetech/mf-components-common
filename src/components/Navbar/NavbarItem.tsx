@@ -2,6 +2,7 @@ import React from 'react'
 //import {Link} from 'react-router-dom'
 import {NavbarProps} from "../../types/props";
 import Button from "../Common/Button";
+import '../../styles/sidebar.css'
 
 const NavbarItem = ({activeIndex, handleClick}:NavbarProps) => {
     const item = [

@@ -12,7 +12,7 @@ interface props {
 const RegisterButton = ({className, value, fontColor="text-gray-900",  font = 'font-[\'Roboto\']'}: props): JSX.Element => {
     return (
         <div
-            className={`button ${className}`}>
+            className={`${className}`}>
             <div className={`text ${fontColor}  ${font}`}>
                 <Button children={value}/>
             </div>
