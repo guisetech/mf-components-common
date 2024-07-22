@@ -2,6 +2,7 @@ import React from 'react'
 //import {Link} from 'react-router-dom'
 import Button from "../Common/Button";
 import '../../styles/sidebar.css'
+import {Link} from "react-router-dom";
 
 const NavbarItem = () => {
     const item = [
@@ -25,9 +26,9 @@ const NavbarItem = () => {
             {
                 item.map((value, index) => {
                     return (
-                        <a key={index}
+                        <Link key={index}
                            // style={activeIndex === index ? activeStyle : defaultStyle}
-                              href={`/${value}`}><Button children={value}/></a>
+                              to={`/${value}`}><Button children={value}/></Link>
                     )
                 })
             }

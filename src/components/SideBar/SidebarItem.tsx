@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Common/Button";
-//import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export interface SidebarItemProps {
     label: string;
@@ -16,8 +16,8 @@ export const SidebarItem = ({
                             }: SidebarItemProps): JSX.Element => {
 
     return (
-        <a
-            href={`/${label}`}
+        <Link
+            to={`/${label}`}
             className={`sidebar-item   ${className}`}
         >
             <div className="icon">
@@ -26,7 +26,7 @@ export const SidebarItem = ({
                 className={`text ${textClassName}`}>
                 <Button children={label} />
             </div>
-        </a>
+        </Link>
     );
 };
 
