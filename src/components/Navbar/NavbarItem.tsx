@@ -1,10 +1,9 @@
 import React from 'react'
 //import {Link} from 'react-router-dom'
-import {NavbarProps} from "../../types/props";
 import Button from "../Common/Button";
 import '../../styles/sidebar.css'
 
-const NavbarItem = ({activeIndex, handleClick}:NavbarProps) => {
+const NavbarItem = () => {
     const item = [
         "About",
         "Features",
@@ -13,13 +12,13 @@ const NavbarItem = ({activeIndex, handleClick}:NavbarProps) => {
         "Team"
     ]
 
-    const activeStyle = {
-        backgroundImage: 'linear-gradient(to right, #fde68a, #fb923c)',
-        padding: '8px',
-        color: 'black'
-    };
-
-    const defaultStyle = {};
+    // const activeStyle = {
+    //     backgroundImage: 'linear-gradient(to right, #fde68a, #fb923c)',
+    //     padding: '8px',
+    //     color: 'black'
+    // };
+    //
+    // const defaultStyle = {};
 
     return (
         <div className="navbarItem ">
@@ -27,7 +26,7 @@ const NavbarItem = ({activeIndex, handleClick}:NavbarProps) => {
                 item.map((value, index) => {
                     return (
                         <a key={index}
-                           style={activeIndex === index ? activeStyle : defaultStyle}
+                           // style={activeIndex === index ? activeStyle : defaultStyle}
                               href={`/${value}`}><Button children={value}/></a>
                     )
                 })
