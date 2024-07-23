@@ -7,7 +7,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement>, Componen
     align?: (typeof RowAligns)[number];
     justify?: (typeof RowJustify)[number];
     wrap?: boolean;
-    contentEditable:boolean | 'plaintext-only';
+    contentEditable?:boolean | 'plaintext-only';
 }
 
 export interface ColProps extends React.HTMLAttributes<HTMLDivElement>, ComponentBaseProps {
