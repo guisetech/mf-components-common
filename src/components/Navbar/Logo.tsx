@@ -1,12 +1,13 @@
 import React from 'react'
 import '../../styles/sidebar.css'
+import image from "../../assets/logo.png";
 
 const Logo = () => {
     return (
         <div className="logo-container">
             <div className="logo-inner">
                 <div className="logo-icon">
-                    <img src="logo.png" alt="logo"/>
+                    <img src={image} alt="logo"/>
                 </div>
                 <div className="logo-text-container">
                     <div
