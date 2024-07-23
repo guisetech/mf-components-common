@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import SideBar from "../../components/SideBar/SideBar";
 import {Layout, LayoutProps, Content} from "./Layout";
 import * as H from "history";
-import {Col, Row} from "../grid";
+import {Col, Row} from "antd";
 
 export interface AppLayoutProps extends LayoutProps {
     content?: React.ReactNode;
