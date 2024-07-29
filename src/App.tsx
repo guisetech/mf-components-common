@@ -1,12 +1,11 @@
-import AppLayout from "./layout/layout/AppLayout";
-import {createBrowserHistory} from "history";
+import Navbar from "./components/Navbar/Navbar";
+import SideBar from "./components/SideBar/SideBar";
 
-const history = createBrowserHistory();
 
 
 const App = () => {
     return (
-        <AppLayout history={history}></AppLayout>
+        <><Navbar/><SideBar/></>
     );
 };
 

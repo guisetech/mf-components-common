@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({children, onClick}) => {
         fontSize: "12px",
     };
 
-    return <div onClick={onClick} style={buttonStyle}>{children}</div>;
+    return <div role="button" onClick={onClick} style={buttonStyle}>{children}</div>;
 };
 
 export default Button;
