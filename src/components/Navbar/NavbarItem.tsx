@@ -1,34 +1,35 @@
-import React from 'react'
-//import {Link} from 'react-router-dom'
+import React, {useEffect} from 'react'
 import Button from "../Common/Button";
 import '../../styles/sidebar.css'
 import {Link} from "react-router-dom";
+import {useActiveIndex} from "../../context/activeIndexContext";
+import navbarContent from "./navbarContent";
 
 const NavbarItem = () => {
-    const item = [
-        "About",
-        "Features",
-        "Pricing",
-        "Gallery",
-        "Team"
-    ]
 
-    // const activeStyle = {
-    //     backgroundImage: 'linear-gradient(to right, #fde68a, #fb923c)',
-    //     padding: '8px',
-    //     color: 'black'
-    // };
-    //
-    // const defaultStyle = {};
+    let {activeNavbarIndex, setActiveNavbarIndex,visibleNavbar } = useActiveIndex();
+
+
+    const activeStyle = {
+        backgroundImage: 'linear-gradient(to right, #fde68a, #fb923c)',
+        padding: '8px',
+        color: 'black',
+        borderRadius: '10px'
+    };
+
+
+    const activeOnCLick = (index: number) => {
+        setActiveNavbarIndex(index);
+    }
 
     return (
         <div className="navbarItem ">
             {
-                item.map((value, index) => {
+                navbarContent.map((value, index) => {
                     return (
                         <Link key={index}
-                           // style={activeIndex === index ? activeStyle : defaultStyle}
-                              to={`/${value}`}><Button children={value}/></Link>
+                              style={visibleNavbar && activeNavbarIndex === index ? activeStyle : {}}
+                              to={`/${value.name}`}><Button children={value.name} onClick={() => activeOnCLick(index)}/></Link>
                     )
                 })
             }
