@@ -42,6 +42,8 @@ const ActiveIndexProvider = ({children}: { children: ReactNode }) => {
         })
     }, [activeSidebarIndex, setActiveSidebarIndex, visibleSidebar, setVisibleSidebar]);
 
+
+
     return (
         <ActiveIndexContext.Provider value={{
             visibleSidebar,
@@ -67,4 +69,6 @@ export const useActiveIndex = (): ActiveIndexContextProps => {
     }
     return context;
 };
+
+
 

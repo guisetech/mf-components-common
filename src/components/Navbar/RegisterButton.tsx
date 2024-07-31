@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {CSSProperties} from 'react'
 import "../../styles/sidebar.css"
 import Button from "../Common/Button";
 
@@ -7,13 +7,14 @@ interface props {
     value: string,
     font?: string,
     fontColor?: string
+    style?: CSSProperties
 }
 
-const RegisterButton = ({className, value, fontColor="text-gray-900",  font = 'font-[\'Roboto\']'}: props): JSX.Element => {
+const RegisterButton = ({className,style, value, fontColor="text-gray-900",  font = 'font-[\'Roboto\']'}: props): JSX.Element => {
     return (
         <div
-            className={`${className}`}>
-            <div className={`text ${fontColor}  ${font}`}>
+            className={`${className}`} style={style}>
+            <div className={`${fontColor}  ${font}`}>
                 <Button children={value}/>
             </div>
         </div>
