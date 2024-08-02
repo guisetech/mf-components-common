@@ -14,11 +14,7 @@ const Navbar = () => {
                 <NavbarItem/>
             </div>
             <div className="button-section">
-                <RegisterButton value={"Log In"} style={{
-                    borderWidth: "2px",
-                    borderColor: "#f59e0b",
-                    color: "white"
-                }} fontColor={"text-white"}/>
+                <RegisterButton value={"Log In"}  fontColor={"text-white"}/>
                 <RegisterButton className={"registerButton"} value={"Register"}/>
             </div>
         </div>
