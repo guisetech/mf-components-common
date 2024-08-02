@@ -8,7 +8,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
 import Logo from "./components/Navbar/Logo";
 import SideBar from "./components/SideBar/SideBar";
-import ActiveIndexProvider from "./context/activeIndexContext";
+import {ActiveIndexProvider} from "./context/activeIndexContext";
 import navbarContent from "./components/Navbar/navbarContent";
 
 

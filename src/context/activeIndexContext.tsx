@@ -2,7 +2,7 @@ import React, {createContext, useContext, useState, ReactNode, useEffect} from '
 import navbarContent from "../components/Navbar/navbarContent";
 import sideBarContent from "../components/SideBar/sideBarContent";
 
-interface ActiveIndexContextProps {
+export interface ActiveIndexContextProps {
     activeNavbarIndex: number;
     visibleNavbar: boolean;
     setVisibleNavbar: (visibleNavbar: boolean) => void;
@@ -60,15 +60,15 @@ const ActiveIndexProvider = ({children}: { children: ReactNode }) => {
     );
 };
 
-export default ActiveIndexProvider;
+export  {ActiveIndexProvider, ActiveIndexContext};
 
-export const useActiveIndex = (): ActiveIndexContextProps => {
-    const context = useContext(ActiveIndexContext);
-    if (!context) {
-        throw new Error('useActiveIndex must be used within an ActiveIndexProvider');
-    }
-    return context;
-};
+// export const useActiveIndex = (): ActiveIndexContextProps => {
+//     const context = useContext(ActiveIndexContext);
+//     if (!context) {
+//         throw new Error('useActiveIndex must be used within an ActiveIndexProvider');
+//     }
+//     return context;
+// };
 
 
 

@@ -4,18 +4,21 @@ import Navbar from "../Navbar/Navbar";
 import SideBar from '../SideBar/SideBar';
 
 interface AppLayoutProps {
+    Navbar?: ReactNode;
+    SideBar?: ReactNode;
     Content?: ReactNode;
 }
 
 
-const AppLayout: React.FC<AppLayoutProps> = ({ Content}) => {
+
+const AppLayout: React.FC<AppLayoutProps> = ({Navbar,SideBar, Content}) => {
     return (
         <>
             <Row>
-                <Col span={24}><Navbar/></Col>
+                <Col span={24}>{Navbar}</Col>
             </Row>
             <Row>
-                <Col span={4}><SideBar/></Col>
+                <Col span={4}>{SideBar}</Col>
                 <Col span={20}>{Content}</Col>
             </Row>
         </>

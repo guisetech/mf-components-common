@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import SidebarItem from "./SidebarItem";
-import {useActiveIndex} from "../../context/activeIndexContext";
+import {ActiveIndexContext} from "../../context/activeIndexContext";
 import sideBarContent from "./sideBarContent";
 
 const SideBar = () => {
-    let {activeSidebarIndex,setActiveSidebarIndex,visibleSidebar} = useActiveIndex();
+    const context = useContext(ActiveIndexContext);
+
+    if(!context) {
+        return null;
+    }
+
+    let {activeSidebarIndex,setActiveSidebarIndex,visibleSidebar} = context;
 
     const activeStyle = {
         backgroundImage: 'linear-gradient(to right, #fde68a, #fb923c)',

@@ -1,14 +1,19 @@
-import React, {useEffect} from 'react'
+import React, {useContext, useEffect} from 'react'
 import Button from "../Common/Button";
 import '../../styles/sidebar.css'
 import {Link} from "react-router-dom";
-import {useActiveIndex} from "../../context/activeIndexContext";
 import navbarContent from "./navbarContent";
+import {ActiveIndexContext} from "../../context/activeIndexContext";
 
 const NavbarItem = () => {
 
-    let {activeNavbarIndex, setActiveNavbarIndex,visibleNavbar } = useActiveIndex();
+    const context = useContext(ActiveIndexContext);
 
+    if(!context) {
+        return null;
+    }
+
+    const { activeNavbarIndex, setActiveNavbarIndex, visibleNavbar } = context;
 
     const activeStyle = {
         backgroundImage: 'linear-gradient(to right, #fde68a, #fb923c)',
