@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useState, ReactNode, useEffect} from 'react';
+import React, {createContext, useState, ReactNode, useEffect} from 'react';
 import navbarContent from "../components/Navbar/navbarContent";
 import sideBarContent from "../components/SideBar/sideBarContent";
 
